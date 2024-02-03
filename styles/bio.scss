@@ -1,0 +1,304 @@
+@use "./partials/variables" as *;
+
+//Body Stylin
+body {
+    margin: 0;
+    padding: 0;
+
+    * {
+        font-family: "Avenir";
+    }
+}
+
+// Header Section
+// p {
+//     font-family: "Avenir";
+//     font-weight: 700;
+// }
+// Main Section
+.header {
+    background-color: #323232;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header__nav {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+
+
+    // text-decoration: inherit;
+    // width: 100%;
+    // display: flex;
+    justify-content: space-between;
+}
+
+.header__list-item {
+    // padding: 1rem;
+
+    // justify-content: center;
+    // text-decoration: inherit;
+}
+
+.header__logo {
+    box-sizing: border-box;
+    // justify-content: center;
+    // height: 1.25rem;
+    // width: 7.5rem;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.header__logo-image {
+    height: 1.25rem;
+    width: 7.5rem;
+}
+
+
+
+.header__list-menu-section {
+    // width: 100%;
+    // display: flex;
+    // justify-content: space-between;
+
+}
+
+.header__list-menu {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    width: 100%;
+    text-align: center;
+    color: #E1E1E1;
+    // margin-top:0.5rem;
+    padding-bottom: 0.5rem;
+
+    &--selected {
+        border-bottom: 0.2rem solid white;
+        font-weight: 700;
+        color: white;
+
+
+    }
+
+    &:hover {
+        border-bottom: 0.2rem solid white;
+        font-weight: 400;
+        color: white;
+
+    }
+}
+
+.header__list-link {
+    text-decoration: inherit;
+    color: inherit;
+    // font-size: 0.875rem;
+    // font-weight: 600;
+    // line-height: 1.375rem;
+}
+
+// Main Section
+.main {
+    margin-top: 4.69rem;
+    // margin-top: 5.875rem;
+
+
+}
+
+.main__hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-image: url("../assets/images/hero-bio.jpg");
+    // margin-top: 4.69rem;
+    //    margin-top: 5.875rem;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    box-sizing: border-box;
+    height: 182px;
+
+    // height:100%;
+    &-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(32, 32, 32, 0.5);
+    }
+
+    &-text {
+        position: absolute;
+
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        color: white;
+        // padding: 4.5rem 0;
+        // margin-top: 4.69rem;
+        width: 100%;
+        margin: 0;
+        margin-left: 1rem;
+
+        // margin
+    }
+}
+
+.main__about-section {
+
+    margin: 0rem 1rem;
+}
+
+.main__about-title {
+    @extend .main__hero-text;
+    position: static;
+    padding: 0;
+    color: #323232;
+    margin: 1.5rem 0 1rem;
+
+
+}
+
+.main__about-image {
+    padding: 0;
+    // color: #323232;
+    // margin: 1rem 0 1rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    // background-size: cover; 
+    // image-position: center;
+
+}
+
+.main__about-quote {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.main__about-subtitle {
+    @extend .main__about-quote;
+    // font-size: 0.8125rem;
+    // line-height: 1.125rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.main__about-copy {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    margin: 0 0 1rem;
+}
+
+.main__gallery-title {
+    @extend .main__about-title;
+    margin: 0;
+    padding: 1.5rem 0 1rem;
+}
+
+.main__gallery {
+    @extend .main__about-section;
+    background-color: #FAFAFA;
+}
+
+.main__gallery-photo {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    &--last {
+        margin-bottom: 0;
+
+    }
+}
+
+// Footer section
+.footer {
+    background-color: #323232;
+    margin-top: 1rem;
+
+
+}
+
+.footer__title {
+    @extend .main__about-title;
+    margin: 0;
+    margin-left: 1rem;
+    padding: 1.5rem 0 1rem;
+    color: white;
+}
+
+.footer__socials-section {
+    display: flex;
+    justify-content: space-between;
+    width: 38%;
+    margin-left: 1rem;
+
+}
+
+.footer__subtitle {
+    @extend .main__about-quote;
+    color: white;
+    margin: 1rem 0;
+}
+
+.footer__management-section,
+.footer__group-section,
+.footer__arch-section {
+    margin: 1rem 1rem 1.5rem;
+}
+
+.footer__management-contact,
+.footer__group-details,
+.footer__arch-details {
+    @extend .main__about-copy;
+    color: white;
+    width: 50%;
+}
+
+// .footer__group-details {
+//     @extend .footer__management-contact;
+// }
+.header__logo {
+    box-sizing: border-box;
+    // justify-content: center;
+    // height: 1.25rem;
+    // width: 7.5rem;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.footer__logo {
+    @extend .header__logo;
+    padding-top: 1.5rem;
+
+}
+
+.header__logo-image {
+    height: 1.25rem;
+    width: 7.5rem;
+}
+
+.footer__copyright-details {
+    @extend .footer__arch-details;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 0 1rem;
+    font-size: .7325rem;
+}

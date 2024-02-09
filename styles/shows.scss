@@ -218,6 +218,11 @@ body {
     }
 }
 
+
+
+
+
+
 // Main Section
 .main {
     margin-top: 4.69rem;
@@ -236,21 +241,30 @@ body {
 .main__hero {
     position: relative;
     display: flex;
-    align-items: center;
-    background-image: url("../assets/images/hero-bio.jpg");
+    flex-direction: column;
+    align-items: left;
+    background-image: url("../assets/images/hero-shows.jpg");
     background-size: cover;
     background-position: center;
+    justify-content: space-around;
 
     box-sizing: border-box;
     width: 100vw;
-    height: 270px;
+    height: 65vw;
+    padding-bottom: 48px;
 
     @include tablet {
         height: 420px;
+        // justify-content: space-around;
+        // padding-bottom: 36px;
+
     }
 
     @include desktop {
-        height: 456px;
+        height: 40vw;
+        // flex-direction: row;
+        align-items: center;
+
     }
 
     &-overlay {
@@ -262,16 +276,61 @@ body {
         background-color: rgba(50, 50, 50, 0.5);
     }
 
-    &-text {
-        position: absolute;
+    &-styler {
+        @include desktop {
+            // position: relative;
+            display: flex;
+            width: $desktop-breakpoint;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            // width: $desktop-breakpoint;
+
+            left: calc((100% - $desktop-breakpoint)/18);
+        }
+    }
+
+    &-text-styler {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        height: 18vw;
+        justify-content: space-evenly;
+        margin: 32px 0 16px;
+
+        @include tablet {
+            margin: 48px 0 48px;
+            justify-content: space-evenly;
+            // margin: 32px 0 48px;
+
+            // height: 420px;
+        }
+
+        @include desktop {
+            width: 30vw;
+            // width: $desktop-breakpoint;
+            // position: relative;
+            // left: calc((100vw - $desktop-breakpoint) / 2);
+            // height: 456px;
+            // left: calc((100% - $desktop-breakpoint) / 2);
+        }
+
+    }
+
+    &-title {
+        position: relative;
         font-size: 1.5rem;
         line-height: 2rem;
         font-weight: 600;
         color: white;
         box-sizing: border-box;
-        width: 90vw;
+        width: 80vw;
         margin: 0;
         margin-left: 1rem;
+        // display: flex;
+
 
         @include tablet {
             font-size: 60px;
@@ -285,40 +344,129 @@ body {
             font-size: 60px;
             line-height: 68px;
             font-weight: 700;
-            margin-left: 36px;
-            width: $desktop-breakpoint;
-            position: relative;
-            left: calc((100% - $desktop-breakpoint) / 2);
+            width: 400px;
+            margin: 0;
+            // margin-left: 36px;
+            // width: $desktop-breakpoint;
+            // position: relative;
+            // left: calc((100% - $desktop-breakpoint) / 2);
+        }
+    }
+
+    &-album-name {
+        @extend .main__hero-title;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.375rem;
+        display: flex;
+
+        @include tablet {
+            font-size: 24px;
+        }
+
+        @include desktop {
+            font-size: 24px;
+        }
+
+    }
+
+    &-iframe {
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        // width: calc(100vw);
+        @include tablet {
+            font-size: 24px;
+            padding-left: 2.25rem;
+            padding-right: 2.25rem;
+            width: 60vw;
+        }
+
+        @include desktop {
+            font-size: 24px;
+            // padding-left: 2.25rem;
+            // padding-right: 2.25rem;
+            width: 30vw;
+            // left: calc((100% - $desktop-breakpoint) / 2);
         }
     }
 }
 
-.main__about-section {
-
-    margin: 0rem 1rem;
+.main__shows-section {
+    margin-left: 16px;
+    display: flex;
 
     @include tablet {
-        box-sizing: border-box;
-        width: 100vw;
-        padding: 0 80px 0 56px;
-        padding: 0 $largescreen-margin 0 36px;
-        margin: 0;
+        margin-left: 36px;
+        display: flex;
     }
 
     @include desktop {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 0 80px 0 56px;
-        padding: 0 $largescreen-margin 0 36px;
-        margin: 0;
         width: $desktop-breakpoint;
+        margin-left: 36px;
+        display: flex;
+        // width: $desktop-breakpoint;
         position: relative;
         left: calc((100% - $desktop-breakpoint) / 2);
     }
 }
 
+.main__shows-title {
+    margin: 24px 0 16px;
+
+    @include tablet {
+        margin: 48px 0 20px;
+    }
+    @include desktop {
+        margin: 48px 0 20px;
+    }
+}
+
+.main__shows-divider{ 
+    border-top: 1px solid #e1e1e1;
+    width:100%;
+    @include tablet {
+        // margin: 48px 0 20px;
+    }
+    @include desktop {
+        // margin: 48px 0 20px;
+    }
+
+}
+
+
+
+
+
+
+// .main__about-section {
+
+//     margin: 0rem 1rem;
+
+//     @include tablet {
+//         box-sizing: border-box;
+//         width: 100vw;
+//         padding: 0 80px 0 56px;
+//         padding: 0 $largescreen-margin 0 36px;
+//         margin: 0;
+//     }
+
+//     @include desktop {
+//         box-sizing: border-box;
+//         width: 100%;
+//         padding: 0 80px 0 56px;
+//         padding: 0 $largescreen-margin 0 36px;
+//         margin: 0;
+//         width: $desktop-breakpoint;
+//         position: relative;
+//         left: calc((100% - $desktop-breakpoint) / 2);
+//     }
+// }
+
 .main__about-title {
-    @extend .main__hero-text;
+    @extend .main__hero-title;
     position: static;
     padding: 0;
     color: $bandsite-black;
@@ -455,78 +603,84 @@ body {
     }
 }
 
-.main__gallery-title {
-    @extend .main__about-title;
-    margin: 0;
-    padding: 1.5rem 0 1rem;
+// .main__gallery-title {
+//     @extend .main__about-title;
+//     margin: 0;
+//     padding: 1.5rem 0 1rem;
 
-    @include tablet {
-        padding: $largescreen-margin 0 20px 0;
-    }
+//     @include tablet {
+//         padding: $largescreen-margin 0 20px 0;
+//     }
 
-    @include desktop {
-        padding: $largescreen-margin 0 20px 0;
-        padding-left: 36px;
-        position: relative;
-        left: calc((100% - $desktop-breakpoint) / 2);
+//     @include desktop {
+//         padding: $largescreen-margin 0 20px 0;
+//         padding-left: 36px;
+//         position: relative;
+//         left: calc((100% - $desktop-breakpoint) / 2);
 
-    }
-}
+//     }
+// }
 
-.main__gallery {
-    @extend .main__about-section;
-    background-color: #FAFAFA;
+// .main__gallery {
+//     @extend .main__about-section;
+//     background-color: #FAFAFA;
 
-    @include desktop {
-        position: relative;
-        left: calc((100% - $desktop-breakpoint) / 2);
-    }
+//     @include desktop {
+//         position: relative;
+//         left: calc((100% - $desktop-breakpoint) / 2);
+//     }
 
-    &-styler {
-        @include tablet {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+//     &-styler {
+//         @include tablet {
+//             display: flex;
+//             flex-wrap: wrap;
+//             justify-content: space-between;
+//         }
 
-        @include desktop {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-    }
+//         @include desktop {
+//             display: flex;
+//             flex-wrap: wrap;
+//             justify-content: space-between;
+//         }
+//     }
 
-}
+// }
 
-.main__gallery-photo {
-    width: 100%;
-    margin-bottom: 1rem;
+// .main__gallery-photo {
+//     width: 100%;
+//     margin-bottom: 1rem;
 
-    @include tablet {
-        width: 31%;
-        margin-bottom: 1.9rem;
-    }
+//     @include tablet {
+//         width: 31%;
+//         margin-bottom: 1.9rem;
+//     }
 
-    @include desktop {
-        width: 31%;
-        margin-bottom: 1.9rem;
-    }
+//     @include desktop {
+//         width: 31%;
+//         margin-bottom: 1.9rem;
+//     }
 
-    &--last {
-        margin-bottom: 0;
+//     &--last {
+//         margin-bottom: 0;
 
-        @include tablet {
-            margin-bottom: 1rem;
-        }
+//         @include tablet {
+//             margin-bottom: 1rem;
+//         }
 
-        @include desktop {
-            margin-bottom: 1rem;
-        }
+//         @include desktop {
+//             margin-bottom: 1rem;
+//         }
 
-    }
+//     }
 
 
-}
+// }
+
+
+
+
+
+
 
 // Footer section
 
@@ -556,6 +710,7 @@ body {
         }
 
     }
+
     & a {
         color: inherit;
         text-decoration: none;
@@ -586,7 +741,7 @@ body {
 }
 
 .footer__title {
-    @extend .main__about-title;
+    @extend .main__shows-title;
     margin: 0;
     margin-left: 1rem;
     padding: 1.5rem 0 1rem;

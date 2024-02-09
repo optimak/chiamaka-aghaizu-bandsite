@@ -256,13 +256,16 @@ body * {
 .main__hero {
   position: relative;
   display: flex;
-  align-items: center;
-  background-image: url("../assets/images/hero-bio.jpg");
+  flex-direction: column;
+  align-items: left;
+  background-image: url("../assets/images/hero-shows.jpg");
   background-size: cover;
   background-position: center;
+  justify-content: space-around;
   box-sizing: border-box;
   width: 100vw;
-  height: 270px;
+  height: 65vw;
+  padding-bottom: 48px;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .main__hero {
@@ -271,7 +274,8 @@ body * {
 }
 @media (min-width: 1280px) {
   .main__hero {
-    height: 456px;
+    height: 40vw;
+    align-items: center;
   }
 }
 .main__hero-overlay {
@@ -282,19 +286,50 @@ body * {
   height: 100%;
   background-color: rgba(50, 50, 50, 0.5);
 }
-.main__hero-text, .main__about-title, .footer__title, .main__gallery-title {
-  position: absolute;
+@media (min-width: 1280px) {
+  .main__hero-styler {
+    display: flex;
+    width: 1280px;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    left: calc((100% - 1280px) / 18);
+  }
+}
+.main__hero-text-styler {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 18vw;
+  justify-content: space-evenly;
+  margin: 32px 0 16px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main__hero-text-styler {
+    margin: 48px 0 48px;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1280px) {
+  .main__hero-text-styler {
+    width: 30vw;
+  }
+}
+.main__hero-title, .main__about-title, .main__hero-album-name {
+  position: relative;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
   color: white;
   box-sizing: border-box;
-  width: 90vw;
+  width: 80vw;
   margin: 0;
   margin-left: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .main__hero-text, .main__about-title, .footer__title, .main__gallery-title {
+  .main__hero-title, .main__about-title, .main__hero-album-name {
     font-size: 60px;
     line-height: 68px;
     font-weight: 700;
@@ -303,43 +338,90 @@ body * {
   }
 }
 @media (min-width: 1280px) {
-  .main__hero-text, .main__about-title, .footer__title, .main__gallery-title {
+  .main__hero-title, .main__about-title, .main__hero-album-name {
     font-size: 60px;
     line-height: 68px;
     font-weight: 700;
-    margin-left: 36px;
-    width: 1280px;
-    position: relative;
-    left: calc((100% - 1280px) / 2);
+    width: 400px;
+    margin: 0;
   }
 }
-
-.main__about-section, .main__gallery {
-  margin: 0rem 1rem;
+.main__hero-album-name {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  display: flex;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .main__about-section, .main__gallery {
-    box-sizing: border-box;
-    width: 100vw;
-    padding: 0 80px 0 56px;
-    padding: 0 48px 0 36px;
-    margin: 0;
+  .main__hero-album-name {
+    font-size: 24px;
   }
 }
 @media (min-width: 1280px) {
-  .main__about-section, .main__gallery {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 80px 0 56px;
-    padding: 0 48px 0 36px;
-    margin: 0;
+  .main__hero-album-name {
+    font-size: 24px;
+  }
+}
+.main__hero-iframe {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main__hero-iframe {
+    font-size: 24px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    width: 60vw;
+  }
+}
+@media (min-width: 1280px) {
+  .main__hero-iframe {
+    font-size: 24px;
+    width: 30vw;
+  }
+}
+
+.main__shows-section {
+  margin-left: 16px;
+  display: flex;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main__shows-section {
+    margin-left: 36px;
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .main__shows-section {
     width: 1280px;
+    margin-left: 36px;
+    display: flex;
     position: relative;
     left: calc((100% - 1280px) / 2);
   }
 }
 
-.main__about-title, .footer__title, .main__gallery-title {
+.main__shows-title, .footer__title {
+  margin: 24px 0 16px;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main__shows-title, .footer__title {
+    margin: 48px 0 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .main__shows-title, .footer__title {
+    margin: 48px 0 20px;
+  }
+}
+
+.main__shows-divider {
+  border-top: 1px solid #e1e1e1;
+  width: 100%;
+}
+.main__about-title {
   position: static;
   padding: 0;
   color: #323232;
@@ -348,13 +430,13 @@ body * {
   width: 88vw;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .main__about-title, .footer__title, .main__gallery-title {
+  .main__about-title {
     margin: 3rem 0 1.25rem;
     font-size: 36px;
   }
 }
 @media (min-width: 1280px) {
-  .main__about-title, .footer__title, .main__gallery-title {
+  .main__about-title {
     margin: 3rem 0 1.25rem;
     font-size: 36px;
     margin-left: 36px;
@@ -488,78 +570,6 @@ body * {
     font-size: 14px;
     line-height: 22px;
     width: 47%;
-  }
-}
-
-.main__gallery-title {
-  margin: 0;
-  padding: 1.5rem 0 1rem;
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .main__gallery-title {
-    padding: 48px 0 20px 0;
-  }
-}
-@media (min-width: 1280px) {
-  .main__gallery-title {
-    padding: 48px 0 20px 0;
-    padding-left: 36px;
-    position: relative;
-    left: calc((100% - 1280px) / 2);
-  }
-}
-
-.main__gallery {
-  background-color: #FAFAFA;
-}
-@media (min-width: 1280px) {
-  .main__gallery {
-    position: relative;
-    left: calc((100% - 1280px) / 2);
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .main__gallery-styler {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-@media (min-width: 1280px) {
-  .main__gallery-styler {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-
-.main__gallery-photo {
-  width: 100%;
-  margin-bottom: 1rem;
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .main__gallery-photo {
-    width: 31%;
-    margin-bottom: 1.9rem;
-  }
-}
-@media (min-width: 1280px) {
-  .main__gallery-photo {
-    width: 31%;
-    margin-bottom: 1.9rem;
-  }
-}
-.main__gallery-photo--last {
-  margin-bottom: 0;
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .main__gallery-photo--last {
-    margin-bottom: 1rem;
-  }
-}
-@media (min-width: 1280px) {
-  .main__gallery-photo--last {
-    margin-bottom: 1rem;
   }
 }
 
@@ -773,4 +783,4 @@ body * {
   .footer__copyright-details {
     margin: 0 36px;
   }
-}/*# sourceMappingURL=bio.css.map */
+}/*# sourceMappingURL=shows.css.map */

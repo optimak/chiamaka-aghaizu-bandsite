@@ -376,7 +376,8 @@ body {
         padding-left: 1rem;
         padding-right: 1rem;
 
-        // width: calc(100vw);
+        width: calc(100vw);
+
         @include tablet {
             font-size: 24px;
             padding-left: 2.25rem;
@@ -397,39 +398,172 @@ body {
 .main__shows-section {
     margin-left: 16px;
     display: flex;
+    flex-direction: column;
 
     @include tablet {
-        margin-left: 36px;
-        display: flex;
+        margin-left: 36px; //row
+        // display: flex;
     }
 
     @include desktop {
         width: $desktop-breakpoint;
         margin-left: 36px;
-        display: flex;
+        // display: flex;//row
         // width: $desktop-breakpoint;
         position: relative;
         left: calc((100% - $desktop-breakpoint) / 2);
     }
 }
 
+.main__shows-styler {
+    padding: 16px 0 0 0;
+    // padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    // z-index: 100;
+
+    @include tablet {
+        // margin-left: 36px;
+        // // display: flex;//row
+    }
+
+    @include desktop {
+        // width: $desktop-breakpoint;
+        // margin-left: 36px;
+        // // display: flex;
+        // // width: $desktop-breakpoint;
+        // position: relative;
+        // left: calc((100% - $desktop-breakpoint) / 2);
+    }
+
+    &:hover {
+        background-color: #FAFAFA;
+
+    }
+
+    &--selected {
+        //for onClick
+        background-color: #e1e1e1;
+
+        &:hover {
+            background-color: #e1e1e1;
+
+        }
+    }
+}
+
+.main__shows-details-styler {
+    // margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        // margin-left: 36px;
+        // // display: flex;
+    }
+
+    @include desktop {
+        // width: $desktop-breakpoint;
+        // margin-left: 36px;
+        // // display: flex;
+        // // width: $desktop-breakpoint;
+        // position: relative;
+        // left: calc((100% - $desktop-breakpoint) / 2);
+    }
+}
+
 .main__shows-title {
     margin: 24px 0 16px;
+    font-size: 24px;
+
 
     @include tablet {
         margin: 48px 0 20px;
     }
+
     @include desktop {
         margin: 48px 0 20px;
     }
 }
 
-.main__shows-divider{ 
+.main__shows-details {
+    // margin: 24px 0 16px; 
+    font-size: 14px; //CHECK FOR EXISTING STYLE!!!
+    line-height: 22px;
+    font-weight: 400;
+    color: #323232;
+
+
+    // @include tablet {
+    //     margin: 48px 0 20px;
+    // }
+    // @include desktop {
+    //     margin: 48px 0 20px;
+    // }
+    &--date {
+        @extend .main__shows-details;
+        font-weight: 600; //might be 700
+    }
+}
+
+.main__shows-subtitle {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700; //extend for BUTTON
+    color: #AFAFAF;
+    margin: 0;
+    // color: #ffffff;
+
+    &--lower-rows {
+        @include tablet {
+            display: none;
+
+        }
+
+        @include desktop {
+            display: none;
+
+        }
+    }
+
+
+}
+
+.main__shows-button {
+    @extend .main__shows-subtitle;
+    font-size: 18px; //increase???
+    border: none;
+    color: white;
+    height: 40px;
+    /*padding: 20px;*/
+    /*text-align: center;*/
+    /*text-decoration: none;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // font-size: 10px;
+    font-weight: 650;
+    // margin: 4px 2px;
+    border-radius: 4px;
+    width: 100%; //width for tab/desk >= 150px, padding for those >=32px
+    background-color: #323232;
+
+    &:hover {
+        @extend .main__shows-button;
+        background-color: #000000;
+        cursor: pointer;
+    }
+}
+
+.main__shows-divider {
     border-top: 1px solid #e1e1e1;
-    width:100%;
+    margin-bottom: 0;
+    width: 100%;
+
     @include tablet {
         // margin: 48px 0 20px;
     }
+
     @include desktop {
         // margin: 48px 0 20px;
     }

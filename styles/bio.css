@@ -282,7 +282,7 @@ body * {
   height: 100%;
   background-color: rgba(50, 50, 50, 0.5);
 }
-.main__hero-text, .main__about-title, .footer__title, .main__gallery-title {
+.main__hero-text, .main__about-title, .footer__title, .main__gallery-title, .main__comment-section-title {
   position: absolute;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -294,7 +294,7 @@ body * {
   margin-left: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .main__hero-text, .main__about-title, .footer__title, .main__gallery-title {
+  .main__hero-text, .main__about-title, .footer__title, .main__gallery-title, .main__comment-section-title {
     font-size: 60px;
     line-height: 68px;
     font-weight: 700;
@@ -303,7 +303,7 @@ body * {
   }
 }
 @media (min-width: 1280px) {
-  .main__hero-text, .main__about-title, .footer__title, .main__gallery-title {
+  .main__hero-text, .main__about-title, .footer__title, .main__gallery-title, .main__comment-section-title {
     font-size: 60px;
     line-height: 68px;
     font-weight: 700;
@@ -339,7 +339,7 @@ body * {
   }
 }
 
-.main__about-title, .footer__title, .main__gallery-title {
+.main__about-title, .footer__title, .main__gallery-title, .main__comment-section-title {
   position: static;
   padding: 0;
   color: #323232;
@@ -348,13 +348,13 @@ body * {
   width: 88vw;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .main__about-title, .footer__title, .main__gallery-title {
+  .main__about-title, .footer__title, .main__gallery-title, .main__comment-section-title {
     margin: 3rem 0 1.25rem;
     font-size: 36px;
   }
 }
 @media (min-width: 1280px) {
-  .main__about-title, .footer__title, .main__gallery-title {
+  .main__about-title, .footer__title, .main__gallery-title, .main__comment-section-title {
     margin: 3rem 0 1.25rem;
     font-size: 36px;
     margin-left: 36px;
@@ -461,47 +461,64 @@ body * {
   }
 }
 
+.main__comment-section-name-field::-moz-placeholder, .main__comment-section-comment-field::-moz-placeholder {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+}
+
 .main__about-copy, .footer__management-contact,
 .footer__group-details,
 .footer__arch-details,
-.footer__copyright-details {
+.footer__copyright-details, .main__comment-section-name-field::placeholder, .main__comment-section-comment-field::placeholder {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   margin: 0 0 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .main__comment-section-name-field::-moz-placeholder, .main__comment-section-comment-field::-moz-placeholder {
+    font-size: 14px;
+    line-height: 22px;
+    width: 47%;
+  }
   .main__about-copy, .footer__management-contact,
   .footer__group-details,
   .footer__arch-details,
-  .footer__copyright-details {
+  .footer__copyright-details, .main__comment-section-name-field::placeholder, .main__comment-section-comment-field::placeholder {
     font-size: 14px;
     line-height: 22px;
     width: 47%;
   }
 }
 @media (min-width: 1280px) {
+  .main__comment-section-name-field::-moz-placeholder, .main__comment-section-comment-field::-moz-placeholder {
+    font-size: 14px;
+    line-height: 22px;
+    width: 47%;
+  }
   .main__about-copy, .footer__management-contact,
   .footer__group-details,
   .footer__arch-details,
-  .footer__copyright-details {
+  .footer__copyright-details, .main__comment-section-name-field::placeholder, .main__comment-section-comment-field::placeholder {
     font-size: 14px;
     line-height: 22px;
     width: 47%;
   }
 }
 
-.main__gallery-title {
+.main__gallery-title, .main__comment-section-title {
   margin: 0;
   padding: 1.5rem 0 1rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
-  .main__gallery-title {
+  .main__gallery-title, .main__comment-section-title {
     padding: 48px 0 20px 0;
   }
 }
 @media (min-width: 1280px) {
-  .main__gallery-title {
+  .main__gallery-title, .main__comment-section-title {
     padding: 48px 0 20px 0;
     padding-left: 36px;
     position: relative;
@@ -561,6 +578,180 @@ body * {
   .main__gallery-photo--last {
     margin-bottom: 1rem;
   }
+}
+
+.main__shows-details, .main__comment-section-entry-comment, .main__comment-section-entry-commenter {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #323232;
+}
+.main__shows-details--date {
+  font-weight: 600;
+}
+
+.main__shows-subtitle, .main__comment-section-subtitle, .main__shows-button, .main__comment-section-button, .main__comment-section-button:hover, .main__shows-button:hover {
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #AFAFAF;
+  margin: 0;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main__shows-subtitle--lower-rows {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .main__shows-subtitle--lower-rows {
+    display: none;
+  }
+}
+
+.main__shows-button, .main__comment-section-button, .main__comment-section-button:hover, .main__shows-button:hover {
+  font-size: 18px;
+  border: none;
+  color: white;
+  height: 40px;
+  /*padding: 20px;*/
+  /*text-align: center;*/
+  /*text-decoration: none;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 650;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #323232;
+}
+.main__shows-button:hover, .main__comment-section-button:hover {
+  background-color: #000000;
+  cursor: pointer;
+}
+
+.main__comment-section, .main__comment-section-entries {
+  padding: 16px;
+  box-sizing: border-box;
+  margin-right: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__comment-section-outer-form-styler, .main__comment-section-entry {
+  display: flex;
+  width: 100%;
+  padding-left: 16px;
+}
+
+.main__comment-section-inner-form-styler {
+  width: calc(100% - 84px);
+}
+
+.main__comment-section-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 16px;
+  position: relative;
+  top: 22px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main__comment-section-name-field, .main__comment-section-comment-field {
+  box-sizing: border-box;
+  height: 36px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 6px;
+  border: 1px solid #E1E1E1;
+  margin-bottom: 16px;
+  position: relative;
+}
+.main__comment-section-name-field:focus, .main__comment-section-comment-field:focus {
+  outline: none;
+  border-color: #323232;
+}
+.main__comment-section-name-field::-moz-placeholder, .main__comment-section-comment-field::-moz-placeholder {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  color: #323232;
+}
+.main__comment-section-name-field::placeholder, .main__comment-section-comment-field::placeholder {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  color: #323232;
+}
+.main__comment-section-name-field--error {
+  border-color: #D22D2D;
+}
+
+.main__comment-section-comment-field {
+  height: 120px;
+}
+.main__comment-section-comment-field:focus {
+  outline: none;
+  border-color: #323232;
+}
+.main__comment-section-comment-field--error {
+  border-color: #d22d2d;
+}
+
+.main__shows-divider, .main__comment-section-divider {
+  border-top: 1px solid #e1e1e1;
+  margin-bottom: 0;
+  width: 100%;
+}
+.main__comment-section-entries {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.main__comment-section-divider {
+  margin-top: 0;
+}
+
+.main__comment-section-entry {
+  padding: 0;
+  flex-direction: row;
+  position: relative;
+}
+
+.main__comment-section-entry-avatar {
+  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  padding: 18px;
+  margin-right: 16px;
+  position: relative;
+  top: 20px;
+}
+
+.main__comment-section-entry-text-styler {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: calc(100% - 54px);
+}
+
+.main__comment-section-entry-commenter {
+  font-weight: 700;
+  margin: 16px 0 8px;
+}
+
+.main__comment-section-entry-comment {
+  margin-top: 0;
+}
+.main__comment-section-entry-comment--date {
+  top: 16px;
+  left: calc(100% - 72px);
+  position: absolute;
+  color: #AFAFAF;
 }
 
 .footer {

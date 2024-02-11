@@ -501,7 +501,7 @@ body {
     //     margin: 48px 0 20px;
     // }
     &--date {
-        @extend .main__shows-details;
+        // @extend .main__shows-details;
         font-weight: 600; //might be 700
     }
 }
@@ -543,7 +543,6 @@ body {
     align-items: center;
     // font-size: 10px;
     font-weight: 650;
-    // margin: 4px 2px;
     border-radius: 4px;
     width: 100%; //width for tab/desk >= 150px, padding for those >=32px
     background-color: #323232;

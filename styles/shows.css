@@ -437,7 +437,7 @@ body * {
   }
 }
 
-.main__shows-details, .main__shows-details--date {
+.main__shows-details {
   font-size: 14px;
   line-height: 22px;
   font-weight: 400;

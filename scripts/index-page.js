@@ -27,23 +27,15 @@ const commentDivider = document.createElement("hr");
 commentDivider.classList.add("main__comment-section-divider");
 
 const addComment = (commentList) => {
-    // for (let i = 0; i < commentList.length; i++) {
     for (let i = commentList.length - 1; i >= 0; i--) {
-
-
-
-
-        // commentSectionEl
-
 
 
         const commentEntry = document.createElement('section');
         commentEntry.classList.add("main__comment-section-entry");
-        // const commentAvatarOverlay = document.createElement('div');
         const commentDividerInner = document.createElement("hr");
         commentDividerInner.classList.add("main__comment-section-divider");
 
-        const commentAvatar = document.createElement('div'); //using div instead of img
+        const commentAvatar = document.createElement('div'); //using div instead of img for Avatar
         commentAvatar.classList.add("main__comment-section-entry-avatar");
         const commentTextStyler = document.createElement('div');
         commentTextStyler.classList.add("main__comment-section-entry-text-styler");
@@ -110,20 +102,10 @@ form.addEventListener("submit", (event) => {
 
     addComment(additionalComments);
     addComment(initialCommentList);
+    form.reset(); 
+
 
 })
-
-
-
-
-
-
-
-
-
-// commentSectionEl.appendChild(commentEntry);
-
-
 
 
 

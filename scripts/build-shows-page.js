@@ -99,12 +99,20 @@ for (let i = 0; i < showList.length; i++) {
     showTextLocation.innerText = showList[i].LOCATION;
     showTextLocation.classList.add('main__shows-details');
 
+    if (i > 0) {
+        showSubtitleDate.classList.add('main__shows-subtitle--lower-rows');
+        showSubtitleVenue.classList.add('main__shows-subtitle--lower-rows');
+        showSubtitleLocation.classList.add('main__shows-subtitle--lower-rows');
+    }
+
     showSection.appendChild(showStyler); //first one
+    showSection.appendChild(showDivider);
+
     showStyler.appendChild(showDetailsStylerDate);
     showStyler.appendChild(showDetailsStylerVenue);
     showStyler.appendChild(showDetailsStylerLocation);
     showStyler.appendChild(showButton);
-    showStyler.appendChild(showDivider);
+    // showStyler.appendChild(showDivider);
 
     showDetailsStylerDate.appendChild(showSubtitleDate);
     showDetailsStylerDate.appendChild(showTextDate);
@@ -120,22 +128,21 @@ const shows = document.querySelectorAll('.main__shows-styler');
 console.log(shows);
 // Function to handle item click
 function selectOnClick(event) {
-    // console.log('EVENT init', event.currentTarget.classList[1])//value);
     //Check if clicking on current selection
     if (event.currentTarget.classList[1] == "main__shows-styler--selected") {
         event.currentTarget.classList.remove('main__shows-styler--selected');
         return
     }
- 
-      shows.forEach( (show) => show.classList.remove('main__shows-styler--selected'));
-    
-    // Add the 'selected' class to the clicked item
-    console.log('EVENT', event.currentTarget.classList[1])//value);
+
+    shows.forEach((show) => show.classList.remove('main__shows-styler--selected'));
+
+    // add main__shows-styler--selected on clicked item
+    // console.log('EVENT', event.currentTarget.classList[1])//value);
     if (event.currentTarget.classList[0] == "main__shows-styler") {
         event.currentTarget.classList.add('main__shows-styler--selected');
     }
-    
-    
+
+
 }
 
 // shows.forEach(show => console.log(show));
@@ -145,13 +152,4 @@ shows.forEach(show => {
     show.addEventListener('click', selectOnClick);
 });
 
-
-
-// showStyler
-//
-
-
-
-
-// console.log(showSection);
 

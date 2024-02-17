@@ -34,11 +34,8 @@ const showList = [
 
 
 const mainSection = document.querySelector(".main");
-// console.log(mainSection);
-// const showSection = document.querySelector(".main__shows-section");
-// console.log(showSection);
+
 const showSection = document.createElement("section");
-// console.log(showSection);
 showSection.classList.add("main__shows-section");
 
 
@@ -55,7 +52,6 @@ for (let i = 0; i < showList.length; i++) {
     showStyler.classList.add("main__shows-styler");
 
 
-    // showStyler.addEventListener('click',)
 
 
     const showDetailsStylerDate = document.createElement("div");
@@ -112,7 +108,6 @@ for (let i = 0; i < showList.length; i++) {
     showStyler.appendChild(showDetailsStylerVenue);
     showStyler.appendChild(showDetailsStylerLocation);
     showStyler.appendChild(showButton);
-    // showStyler.appendChild(showDivider);
 
     showDetailsStylerDate.appendChild(showSubtitleDate);
     showDetailsStylerDate.appendChild(showTextDate);
@@ -137,7 +132,6 @@ function selectOnClick(event) {
     shows.forEach((show) => show.classList.remove('main__shows-styler--selected'));
 
     // add main__shows-styler--selected on clicked item
-    // console.log('EVENT', event.currentTarget.classList[1])//value);
     if (event.currentTarget.classList[0] == "main__shows-styler") {
         event.currentTarget.classList.add('main__shows-styler--selected');
     }
@@ -145,7 +139,6 @@ function selectOnClick(event) {
 
 }
 
-// shows.forEach(show => console.log(show));
 
 // Add click event listener to each item
 shows.forEach(show => {

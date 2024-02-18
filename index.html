@@ -8,8 +8,9 @@
 
     <link rel="stylesheet" href="styles/bio.css">
 
-    <!-- <script src="./scripts/index-page.js" defer></script> -->
-    <script src="./scripts/band-site-api.js" defer></script>
+    <!-- <script src="./scripts/band-site-api.js" type="module"></script> -->
+    <script src="./scripts/index-page.js" type="module"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
     <title>chiamaka-aghaizu-bandsite</title>
@@ -100,7 +101,7 @@
 
                 <div class="main__comment-section-inner-form-styler">
                     <form id="commentForm">
-                        <label class="main__comment-section-subtitle" for="full-name">NAME</label>
+                        <label class="main__comment-section-subtitle" for="fullName">NAME</label>
                         <input class="main__comment-section-name-field" type="text" name="fullName" id="fullName"
                             placeholder="Enter your name">
                         <label class="main__comment-section-subtitle" for="comment">COMMENT</label>
@@ -113,7 +114,6 @@
 
 
             </div>
-            <!-- <hr class="main__comment-section-divider"> -->
         </section>
 
     </main>

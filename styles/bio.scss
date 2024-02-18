@@ -338,15 +338,15 @@
             width: 100%;
 
             @include tablet {
-                padding: 0 0 0 3.25rem;
-                width: calc(100vw - 11.5rem);
+                padding: 0 0 0 6.25rem;
+                width: calc(100vw - 4.5rem);
 
             }
 
 
             @include desktop {
                 padding: 0 0 0 3.25rem;
-                width: calc($desktop-breakpoint - 31.875rem);
+                width: calc($desktop-breakpoint - 31.5rem);
                 position: relative;
                 left: calc((100% - $desktop-breakpoint + 31.875rem) / 2);
                 margin-bottom: 2.25rem;
@@ -501,8 +501,8 @@
 
             @include tablet {
                 box-sizing: border-box;
-                padding: 0 0 0 3.25rem;
-                width: calc(100vw - 150.25rem);
+                padding: 0 0 0 6.25rem;
+                width: calc(100vw - 5.9rem);
             }
 
             @include desktop {
@@ -519,11 +519,10 @@
             width: 100%;
             margin-top: 0;
 
-            // @include tablet {
-            // }
+            @include tablet {
+                width: 100%
+            }
 
-            // @include desktop {
-            // }
 
         }
 
@@ -540,6 +539,7 @@
             @include desktop {
                 position: static;
                 margin-bottom: 1rem;
+                width:calc($desktop-breakpoint - 27.5rem);
             }
 
             &-avatar {
@@ -569,18 +569,17 @@
                 display: flex;
                 flex-direction: column;
                 box-sizing: border-box;
-                // width:100%;
                 width: calc(100% - 5.25rem);
             
                 @include tablet {
-                    width: calc(100% - 9.5rem);
+                    width: calc(100% - 10.95rem);
                     position: relative;
             
                 }
             
                 @include desktop {
                     box-sizing: border-box;
-                    width: calc(100% - 12.5rem);
+                    width: calc(100% - 12.75rem);
                     position: relative;
             
                 }

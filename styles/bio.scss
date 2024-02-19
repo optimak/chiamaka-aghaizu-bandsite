@@ -520,7 +520,7 @@
             margin-top: 0;
 
             @include tablet {
-                width: 100%
+                width: calc(100% - 2.9rem);
             }
 
 
@@ -534,6 +534,7 @@
 
             @include tablet {
                 position: static;
+                width: calc(100vw - 7.5rem);
             }
 
             @include desktop {
@@ -572,7 +573,7 @@
                 width: calc(100% - 5.25rem);
             
                 @include tablet {
-                    width: calc(100% - 10.95rem);
+                    width: calc(100% - 9.95rem);
                     position: relative;
             
                 }

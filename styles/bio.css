@@ -515,7 +515,7 @@
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .main__comment-section-divider {
-    width: 100%;
+    width: calc(100% - 2.9rem);
   }
 }
 .main__comment-section-entry {
@@ -526,6 +526,7 @@
 @media (min-width: 768px) and (max-width: 1279px) {
   .main__comment-section-entry {
     position: static;
+    width: calc(100vw - 7.5rem);
   }
 }
 @media (min-width: 1280px) {
@@ -566,7 +567,7 @@
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .main__comment-section-entry-text-styler {
-    width: calc(100% - 10.95rem);
+    width: calc(100% - 9.95rem);
     position: relative;
   }
 }

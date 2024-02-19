@@ -279,7 +279,6 @@ function addComment(commentList){
 }
 
 
-// renderComments();
 
 
 

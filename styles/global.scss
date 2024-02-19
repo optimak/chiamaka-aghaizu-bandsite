@@ -12,7 +12,7 @@ body {
     * {
         font-family: "Avenir";
     }
-} 
+}
 
 
 .header {
@@ -31,204 +31,195 @@ body {
         display: flex;
         align-items: center;
     }
-}
 
-.header__styler {
-    box-sizing: border-box;
-    width: 100vw;
-    overflow: hidden;
+    &__styler {
+        box-sizing: border-box;
+        width: 100vw;
+        overflow: hidden;
 
-    @include desktop {
-        width: $desktop-breakpoint;
-        position: relative;
-        left: calc((100% - $desktop-breakpoint) / 2);
-    }
-}
-
-.header__nav {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    // width: 100vw;
-
-    @include tablet {
-        flex-direction: row;
-        width: 50%;
-        margin: 0;
-        margin-left: 12px;
-        justify-content: flex-start;
+        @include desktop {
+            width: $desktop-breakpoint;
+            position: relative;
+            left: calc((100% - $desktop-breakpoint) / 2);
+        }
     }
 
-    @include desktop {
-        flex-direction: row;
-        width: 50%;
-        margin: 0;
-        margin-left: 12px;
+    &__nav {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
 
-        justify-content: flex-start;
-    }
-}
+        @include tablet {
+            flex-direction: row;
+            width: 50%;
+            margin: 0;
+            margin-left: 0.75rem;
+            justify-content: flex-start;
+        }
 
-.header__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+        @include desktop {
+            flex-direction: row;
+            width: 50%;
+            margin: 0;
+            margin-left: 0.75rem;
 
-    @include tablet {
-        margin-left: 16px;
-        margin-bottom: 0;
-        height: 100%;
-        width: 40%;
-    }
-
-    @include desktop {
-        margin-left: 16px;
-        margin-bottom: 0;
-        height: 100%;
-        width: 40%;
+            justify-content: flex-start;
+        }
     }
 
-}
-
-.header__list-item {
-
-    @include tablet {
-        padding: 24px;
+    &__list {
+        list-style: none;
         margin: 0;
         padding: 0;
-    }
-
-    @include desktop {
-        padding: 24px;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-.header__logo {
-    box-sizing: border-box;
-    padding: 1rem;
-    padding-bottom: 0;
-
-    @include tablet {
-        padding: 1.5rem 2rem 1.5rem 1.5rem;
-        padding-bottom: 20px;
-    }
-
-    @include desktop {
-        padding: 1.5rem 2rem 1.5rem 1.5rem;
-        padding-bottom: 20px;
-    }
-}
-
-.header__logo-image {
-    height: 1.25rem;
-    width: 7.5rem;
-}
-
-.header__list-menu {
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.375rem;
-    width: 100%;
-    text-align: center;
-    color: #E1E1E1;
-    padding-bottom: 0.5rem;
-
-    @include tablet {
-        padding-bottom: 0rem;
-    }
-
-    @include desktop {
-        padding-bottom: 0rem;
-    }
-
-    &--selected {
-        border-bottom: 0.2rem solid white;
-        font-weight: 700;
-        color: white;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
 
         @include tablet {
-            border-bottom: 0;
+            margin-left: 1rem;
+            margin-bottom: 0;
+            height: 100%;
+            width: 40%;
         }
 
         @include desktop {
-            border-bottom: 0;
+            margin-left: 1rem;
+            margin-bottom: 0;
+            height: 100%;
+            width: 40%;
         }
 
+        &-item {
+
+            @include tablet {
+                padding: 1.5rem;
+                margin: 0;
+                padding: 0;
+            }
+
+            @include desktop {
+                padding: 1.5rem;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        &-menu {
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.375rem;
+            width: 100%;
+            text-align: center;
+            color: #E1E1E1;
+            padding-bottom: 0.5rem;
+
+            @include tablet {
+                padding-bottom: 0rem;
+            }
+
+            @include desktop {
+                padding-bottom: 0rem;
+            }
+
+            &--selected {
+                border-bottom: 0.25rem solid white;
+                font-weight: 500;
+                color: white;
+
+                @include tablet {
+                    border-bottom: 0;
+                }
+
+                @include desktop {
+                    border-bottom: 0;
+                }
+
+
+            }
+
+            &:hover {
+                border-bottom: 0.2rem solid white;
+                font-weight: 400;
+                color: white;
+
+                @include tablet {
+                    border-bottom: 0rem;
+                }
+
+                @include desktop {
+                    border-bottom: 0rem;
+                }
+            }
+        }
+
+        &-link {
+            text-decoration: inherit;
+            color: inherit;
+
+            @include tablet {
+                padding: 1.5rem 0;
+                margin: 0;
+            }
+
+            @include desktop {
+                padding: 1.5rem 0;
+                margin: 0;
+            }
+
+            &--selected {
+                @include tablet {
+                    padding: 1.5rem 0 1.4rem;
+                    margin: 0;
+                    border-bottom: 0.4rem solid white;
+                }
+
+                @include desktop {
+                    padding: 1.5rem 0 1.4rem;
+                    margin: 0;
+                    border-bottom: 0.35rem solid white;
+                }
+            }
+
+            &:hover {
+                @include tablet {
+                    border-bottom: 0.2rem solid white;
+                }
+
+                @include desktop {
+                    border-bottom: 0.2rem solid white;
+                }
+            }
+        }
 
     }
 
-    &:hover {
-        border-bottom: 0.2rem solid white;
-        font-weight: 400;
-        color: white;
+
+    &__logo {
+        box-sizing: border-box;
+        padding: 1rem;
+        padding-bottom: 0;
 
         @include tablet {
-            border-bottom: 0rem;
+            padding: 1.5rem 2rem 1.5rem 1.5rem;
+            padding-bottom: 1.25rem;
         }
 
         @include desktop {
-            border-bottom: 0rem;
+            padding: 1.5rem 2rem 1.5rem 1.5rem;
+            padding-bottom: 1.25rem;
+        }
+
+        &-image {
+            height: 1.25rem;
+            width: 7.5rem;
         }
     }
+
+
 }
 
-.header__list-link {
-    text-decoration: inherit;
-    color: inherit;
 
-    @include tablet {
-        padding: 24px 0;
-        margin: 0;
-    }
-
-    @include desktop {
-        padding: 24px 0;
-        margin: 0;
-    }
-
-    &--selected {
-        @include tablet {
-            padding: 24px 0;
-            margin: 0;
-            border-bottom: 0.2rem solid white;
-        }
-
-        @include desktop {
-            padding: 24px 0;
-            margin: 0;
-            border-bottom: 0.2rem solid white;
-        }
-    }
-
-    &:hover {
-        @include tablet {
-            border-bottom: 0.2rem solid white;
-        }
-
-        @include desktop {
-            border-bottom: 0.2rem solid white;
-        }
-    }
-}
-
-
-
-
-
-
-
-////////
-
-
-
-
-//////////////////
 
 
 // Footer section
@@ -238,14 +229,14 @@ body {
     margin-top: 1rem;
 
     @include tablet {
-        margin-top: 18px;
+        margin-top: 1.125rem;
         display: flex;
         flex-direction: column;
         position: relative;
     }
 
     @include desktop {
-        margin-top: 18px;
+        margin-top: 1.125rem;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -264,242 +255,240 @@ body {
         color: inherit;
         text-decoration: none;
     }
-}
 
+    &__top-styler {
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            margin-left: 2.25rem;
+            justify-content: space-between;
+        }
 
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            width: 37.888%;
+            margin-left: 2.25rem;
+            justify-content: space-between;
 
-.footer__top-styler {
-    @include tablet {
-        // margin-top: $largescreen-margin;
-        display: flex;
-        flex-direction: row;
-        width: 50%;
-        margin-left: 36px;
-        justify-content: space-between;
-    }
-
-    @include desktop {
-        // margin-top: $largescreen-margin;
-        display: flex;
-        flex-direction: row;
-        width: 37.888%;
-        margin-left: 36px;
-        justify-content: space-between;
+        }
 
     }
 
-}
-
-.footer__title {
-    // @extend .main__about-title;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-    position: static;
-    // padding: 0;
-    // color: $bandsite-black;
-    // margin: 1.5rem 0 1rem;
-    // box-sizing: border-box;
-    // width: 88vw;
-
-    margin: 0 0 0 1rem;
-    // margin-left: 1rem;
-    padding: 1.5rem 0 1rem;
-    color: white;
-    box-sizing: border-box;
-    width: auto;
-
-    @include tablet {
-        // line-height: 68px;
-        // font-weight: 700;
-        // width: auto;
-    
-        // margin: 3rem 0 1.25rem;
-        // font-size: 36px;
-        line-height: 68px;
-        font-weight: 700;
+    &__title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        position: static;
+        margin: 0 0 0 1rem;
+        padding: 1.5rem 0 1rem;
+        color: white;
+        box-sizing: border-box;
         width: auto;
-    
-        margin: 3rem 0 1.25rem;
-        font-size: 36px;
 
-        // margin-left: 0;
-        padding-bottom: 0;
-        padding-top: 0;
+        @include tablet {
+            line-height: 4.25rem;
+            width: auto;
+            margin: 3rem 0 1.25rem;
+            font-size: 2.25rem;
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+
+        @include desktop {
+            line-height: 4.25rem;
+            margin: 3rem 0 1.25rem;
+            font-size: 2.25rem;
+            width: $desktop-breakpoint;
+            position: relative;
+            padding-bottom: 0;
+            padding-top: 0;
+            left: 0;
+        }
     }
 
-    @include desktop {
-        line-height: 68px;
-        font-weight: 700;
-
-    
-        margin: 3rem 0 1.25rem;
-        font-size: 36px;
-        // margin-left: 36px;
-        width: $desktop-breakpoint;
-        position: relative;
-        // left: calc((100% - $desktop-breakpoint) / 2);
-
-        
-        // margin-left: 0;
-        padding-bottom: 0;
-        padding-top: 0;
-        left: 0;
-    }
-}
-
-.footer__socials-section {
-    display: flex;
-    justify-content: space-between;
-    width: 25%;
-    margin-left: 1rem;
-
-    @include tablet {
-        justify-content: space-evenly;
-        width: 168px;
-    }
-
-    @include desktop {
-        justify-content: space-evenly;
-        width: 168px;
-    }
-
-}
-
-
-
-.footer__socials-icon {
-    @include tablet {
-        padding: 16px;
-        padding-bottom: 0;
-    }
-
-    @include desktop {
-        padding: 16px;
-        padding-bottom: 0;
-    }
-}
-
-.footer__subtitle {
-    // @extend .main__about-quote;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 600;
-    // margin-top: 0.5rem;
-    // margin-bottom: 0;
-
-
-    color: white;
-    margin: 1rem 0;
-
-    @include tablet {
-        // font-size: 24px;
-        line-height: 2rem;
-        margin-top: 18px;
-        // padding: 0 80px 0 64px;
-
-        padding: 0;
-        font-size: 14px;
-    }
-
-    @include desktop {
-        // font-size: 24px;
-        line-height: 2rem;
-        margin-top: 18px;
-        // padding: 0 80px 0 100px;
-        position: relative;
-        // left: calc((100% - $desktop-breakpoint) / 2);
-
-        padding: 0;
-        font-size: 14px;
-        left: 0;
-    }
-}
-
-.footer__details-styler {
-    @include tablet {
+    &__socials-section {
         display: flex;
-        flex-direction: row;
-        margin-left: 20px;
-        width: calc(100% - 56px);
         justify-content: space-between;
+        width: 25%;
+        margin-left: 1rem;
+
+        @include tablet {
+            justify-content: space-evenly;
+            width: 10.5rem;
+        }
+
+        @include desktop {
+            justify-content: space-evenly;
+            width: 10.5rem;
+        }
+
     }
 
-    @include desktop {
-        display: flex;
-        flex-direction: row;
-        margin-left: 20px;
-        width: calc(100% - 360px);
-        justify-content: space-between;
-    }
-}
+    &__socials-icon {
+        @include tablet {
+            padding: 1rem;
+            padding-bottom: 0;
+        }
 
-
-.footer__management-section,
-.footer__group-section,
-.footer__arch-section {
-    margin: 1rem 1rem 1.5rem;
-}
-
-.footer__management-contact,
-.footer__group-details,
-.footer__arch-details {
-    // @extend .main__about-copy;
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-    margin: 0 0 1rem;
-    color: white;
-    width: 50%;
-
-    @include tablet {
-        font-size: 14px;
-        line-height: 22px;
-        // width: 47%;
-        width: 70%;
+        @include desktop {
+            padding: 1rem;
+            padding-bottom: 0;
+        }
     }
 
-    @include desktop {
-        font-size: 14px;
-        line-height: 22px;
-        // width: 47%;
-        width: 70%;
-    }
-}
+    &__subtitle {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: 600;
+        color: white;
+        margin: 1rem 0;
 
-.footer__logo {
-    @extend .header__logo;
-    padding-top: 1.5rem;
+        @include tablet {
+            line-height: 2rem;
+            margin-top: 1.125rem;
+            padding: 0;
+            font-size: 0.875rem;
+        }
 
-    @include tablet {
-        position: absolute;
-        top: $largescreen-margin;
-        left: 79.1%;
-    }
-
-    @include desktop {
-        position: absolute;
-        top: $largescreen-margin;
-        left: 84%;
-    }
-
-}
-
-
-
-.footer__copyright-details {
-    @extend .footer__arch-details;
-    box-sizing: border-box;
-    width: auto;
-    padding: 1rem 0;
-    margin: 0 1rem;
-    font-size: .7325rem;
-
-    @include tablet {
-        margin: 0 36px;
+        @include desktop {
+            line-height: 2rem;
+            margin-top: 1.125rem;
+            position: relative;
+            padding: 0;
+            font-size: 0.875rem;
+            left: 0;
+        }
     }
 
-    @include desktop {
-        margin: 0 36px;
+    &__details-styler {
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            margin-left: 1.25rem;
+            width: calc(100% - 3.5rem);
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            margin-left: 1.25rem;
+            width: calc(100% - 22.5rem);
+            justify-content: space-between;
+        }
     }
+
+    &__management-section {
+        margin: 1rem 1rem 1.5rem;
+    }
+
+    &__group-section {
+        margin: 1rem 1rem 1.5rem;
+    }
+
+    &__arch-section {
+        margin: 1rem 1rem 1.5rem;
+    }
+
+    &__management-contact {
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+        margin: 0 0 1rem;
+        color: white;
+        width: 50%;
+
+        @include tablet {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            width: 70%;
+        }
+
+        @include desktop {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            width: 70%;
+        }
+    }
+
+    &__group-details {
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+        margin: 0 0 1rem;
+        color: white;
+        width: 50%;
+
+        @include tablet {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            width: 70%;
+        }
+
+        @include desktop {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            width: 70%;
+        }
+    }
+
+    &__arch-details {
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+        margin: 0 0 1rem;
+        color: white;
+        width: 50%;
+
+        @include tablet {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            width: 70%;
+        }
+
+        @include desktop {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            width: 70%;
+        }
+    }
+
+
+    &__logo {
+        @extend .header__logo;
+        padding-top: 1.5rem;
+
+        @include tablet {
+            position: absolute;
+            top: $largescreen-margin;
+            left: 79.1%;
+        }
+
+        @include desktop {
+            position: absolute;
+            top: $largescreen-margin;
+            left: 84%;
+        }
+
+    }
+
+    &__copyright-details {
+        @extend .footer__arch-details;
+        box-sizing: border-box;
+        width: auto;
+        padding: 1rem 0;
+        margin: 0 1rem;
+        font-size: .7325rem;
+
+        @include tablet {
+            margin: 0 2.25rem;
+        }
+
+        @include desktop {
+            margin: 0 2.25rem;
+        }
+    }
+
 }

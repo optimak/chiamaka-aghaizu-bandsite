@@ -117,7 +117,7 @@
 .main__about-title, .main__gallery-title, .main__comment-section-title {
   position: static;
   padding: 0;
-  color: #323232;
+  color: #234f3c;
   margin: 1.5rem 0 1rem;
   box-sizing: border-box;
   width: 88vw;
@@ -425,19 +425,19 @@
 }
 .main__comment-section-name-field:focus, .main__comment-section-comment-field:focus {
   outline: none;
-  border-color: #323232;
+  border-color: #234f3c;
 }
 .main__comment-section-name-field::-moz-placeholder, .main__comment-section-comment-field::-moz-placeholder {
   position: absolute;
   top: 0.5rem;
   left: 0.75rem;
-  color: #323232;
+  color: #234f3c;
 }
 .main__comment-section-name-field::placeholder, .main__comment-section-comment-field::placeholder {
   position: absolute;
   top: 0.5rem;
   left: 0.75rem;
-  color: #323232;
+  color: #234f3c;
 }
 .main__comment-section-name-field--error {
   border-color: #D22D2D;
@@ -447,7 +447,7 @@
 }
 .main__comment-section-comment-field:focus {
   outline: none;
-  border-color: #323232;
+  border-color: #234f3c;
 }
 .main__comment-section-comment-field--error {
   border-color: #d22d2d;
@@ -465,7 +465,7 @@
   font-weight: 600;
   border-radius: 0.25rem;
   width: 100%;
-  background-color: #323232;
+  background-color: #234f3c;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .main__comment-section-button {
@@ -484,7 +484,7 @@
   }
 }
 .main__comment-section-button:hover {
-  background-color: #000000;
+  background-color: #234f3c;
   cursor: pointer;
 }
 .main__comment-section-entries {
@@ -582,7 +582,7 @@
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 400;
-  color: #323232;
+  color: #234f3c;
   margin-top: 0;
 }
 .main__comment-section-entry-comment--date {
@@ -594,7 +594,7 @@
 .main__comment-section-entry-commenter {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  color: #323232;
+  color: #234f3c;
   font-weight: 600;
   margin: 1rem 0 0.5rem;
 }/*# sourceMappingURL=bio.css.map */
